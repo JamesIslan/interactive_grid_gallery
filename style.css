@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #F1E8B8;
+}
+
+header, footer{
+  height: 4rem;
+  background-color: #B6DCFE;
+}
+
+header > h1{
+  font-size: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2E4057;
+  text-align: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  margin: 2rem auto 6rem auto;
+  width: 840px;
+  height: 600px;
+  gap: 5px;
+  
+  & > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: transform 0.3s linear;
+    /*Imagens quadradas*/
+    &#sqr-1{
+      grid-area: 1 / 1 / 2 / 2;
+      &:hover{transform: rotate(360deg);}
+    }
+    &#sqr-2{
+      grid-area: 1 / 4 / 2 / 5;
+      &:hover{transform: scale(1.5);}
+    }
+    &#sqr-3{
+      grid-area: 2 / 2 / 3 / 3;
+      &:hover{transform: translate(20px, 16px);}
+    }
+    &#sqr-4{
+      grid-area: 3 / 2 / 4 / 3;
+      &:hover{transform: skew(15deg, 30deg);}
+    }
+    &#sqr-5{
+      grid-area: 2 / 3 / 3 / 4;
+      &:hover{transform: scale(1.2);}
+    }
+    &#sqr-6{
+      grid-area: 2 / 6 / 3 / 7;
+      &:hover{transform: rotate(-180deg) scaleY(1.4);}
+    }
+    &#sqr-7{
+      grid-area: 4 / 4 / 5 / 5;
+      &:hover{transform: scaleX(0.7) scaleY(1.5);}
+    }
+    &#sqr-8{
+      grid-area: 4 / 5 / 5 / 6;
+      &:hover{transform: scaleX(1.7) scaleY(0.5);}
+    }
+    /*Imagens horizontais*/
+    &#hor-1{
+      grid-area: 1 / 2 / 2 / 4;
+      &:hover{transform: scale(1.8);}
+    }
+    &#hor-2{
+      grid-area: 1 / 5 / 2 / 7;
+      &:hover{transform: translate(25px, 35px);}
+    }
+    &#hor-3{
+      grid-area: 2 / 4 / 3 / 6;
+      &:hover{transform: rotate(90deg);}
+    }
+    &#hor-4{
+      grid-area: 3 / 4 / 4 / 7;
+      &:hover{transform: scaleX(0.8) scaleY(1.4);}
+    }
+    &#hor-5{
+      grid-area: 4 / 1 / 5 / 3;
+      &:hover{transform: skew(10deg, 15deg);}
+    }
+    &#hor-6{
+      grid-area: 4 / 6 / 5 / 8;
+      &:hover{transform: rotate(-90deg)}
+    }
+    /*Imagens verticais*/
+    &#ver-1{
+      grid-area: 1 / 7 / 4 / 8;
+      &:hover{transform: skew(30deg, 45deg);}
+    }
+    &#ver-2{
+      grid-area: 2 / 1 / 4 / 2;
+      &:hover{transform: scaleX(2.0) scaleY(0.3);}
+    }
+    &#ver-3{
+      grid-area: 3 / 3 / 5 / 4;
+      &:hover{transform: rotate(360deg);}
+    }
+    /*Imagens panorâmicas*/
+    &#pan-1{
+      grid-area: 5 / 1 / 6 / 8;
+      &:hover{transform: scale(2.0);}
+    }
+  }
+}
+
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+  font-size: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2E4057;
+  padding: 0 50px;
+  > .contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    > a{
+      display: inherit;
+      flex-direction: inherit;
+      align-items: inherit;
+      gap: 20px;
+      text-decoration: none;
+      color: #2E4057;
+    }
+  }
+}
